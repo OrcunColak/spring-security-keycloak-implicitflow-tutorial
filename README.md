@@ -11,7 +11,7 @@ need for a client secret.
 
 In our application, we configure OpenAPI page to automatically redirect to the Keycloak login page for authentication.
 
-# Keycloak
+# Keycloak Configuration
 
 http://localhost:7080
 
@@ -30,6 +30,24 @@ configure OpenAPI page to automatically redirect to the Keycloak login page for 
 
 Step 3
 We set http://localhost:8080/* as a valid redirect URI.
+
+# Keycloak Grant Types
+
+http://localhost:7080/realms/medium/.well-known/openid-configuration
+
+Grant types are
+
+```
+"grant_types_supported": [
+    "authorization_code",
+    "implicit",
+    "refresh_token",
+    "password",
+    "client_credentials",
+    "urn:openid:params:grant-type:ciba",
+    "urn:ietf:params:oauth:grant-type:device_code"
+  ],
+```
 
 # Swagger
 
